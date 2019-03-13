@@ -1,0 +1,52 @@
+let angle = 0;
+var x = 0;
+var a = 0;
+let song;
+function preload() {
+   song = loadSound('wind1.mp3');}
+
+function setup() {
+  createCanvas(500, 400);
+  angleMode(DEGREES);
+  noStroke();
+  //frameRate(10);
+  song.play();
+  song.loop();
+  song. setVolume(0.4);
+ 
+}
+
+function draw() {
+  
+  background(60, 90, 40);
+  fill(255, 255, 0);
+  scale(0.2);
+  for (var i = 0; i < 15; i++) {
+    push();
+    translate(100 + a + i * 180, 100 + a + i * 120);
+    push();
+    rotate(angle);
+    rectMode(CENTER);
+    rect(0, 0, 300, 30);
+    pop();
+    rect(0, 0, 10, 200);
+    pop();
+ }
+  angle = angle + 1;
+
+  //FENG CHE ---------------
+  //  push();
+  // translate(300, 300);
+  // push();
+  // rotate(angle);
+  // angle = angle + 1;
+  // rectMode(CENTER);
+  // rect(0, 0, 300, 30);
+  // pop();
+  // rect(0, 0, 10, 200);
+  //  pop();
+
+  //FENG CHE------------
+  //x=x+3;
+
+}
